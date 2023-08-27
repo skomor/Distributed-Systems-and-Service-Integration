@@ -1,0 +1,42 @@
+
+interface Person{
+attribute string name;
+attribute string sureName;
+};
+
+struct Car{
+string name;
+double cc;
+string vin;
+long year;
+};
+typedef sequence<Car> rented_cars;
+
+interface Costumer:Person{
+attribute long fees;
+attribute rented_cars rentedCars;
+long rentalTimes();
+void increaseRental();
+
+void addFees(in long newFees);
+void payOffFees(in long newFees);
+};
+
+
+
+
+interface RentalCar{
+attribute long priceForDay;
+attribute boolean isForRent;
+attribute long rentedTimes;
+attribute Car CarStruct;
+
+exception AlreadyRented { };
+exception IsNotForRental { };
+exception NotRented { };
+
+void rent(in Costumer cost) raises(AlreadyRented, IsNotForRental);
+long priceForDays( in long days);
+void unrent() raises(NotRented);
+Person currRenting();
+};

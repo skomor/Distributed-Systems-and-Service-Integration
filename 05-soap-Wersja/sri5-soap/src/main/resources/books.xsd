@@ -1,0 +1,78 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:tns="http://sri5soapps.pskomorowski.sri.pja.edu/books"
+           targetNamespace="http://sri5soapps.pskomorowski.sri.pja.edu/books"
+           elementFormDefault="qualified">
+
+    <xs:complexType name="bookDto">
+        <xs:sequence>
+            <xs:element name="id" type="xs:decimal" minOccurs="0"/>
+            <xs:element name="name" type="xs:string"/>
+            <xs:element name="authorName" type="xs:string"/>
+            <xs:element name="publisher" type="xs:string"/>
+            <xs:element name="publicationDate" type="xs:date"/>
+            <xs:element name="genre" type="xs:string"/>
+            <xs:element name="borrowedTimes" type="xs:int"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:element name="getBooksRequest">
+        <xs:complexType>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getBooksResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="books" type="tns:bookDto" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getBookByIdRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="bookId" type="xs:decimal"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="getBookByIdResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="book" type="tns:bookDto" minOccurs="0" maxOccurs="1"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="addBookRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="book" type="tns:bookDto"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="addBookResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="bookId" type="xs:decimal"  />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="increaseBookBorrowsRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="bookId" type="xs:decimal"  />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="increaseBookBorrowsResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="book" type="tns:bookDto"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>

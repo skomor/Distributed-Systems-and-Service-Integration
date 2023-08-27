@@ -1,0 +1,203 @@
+{
+	"info": {
+		"_postman_id": "eb28e413-80a3-4e41-aa8e-67a09e31604d",
+		"name": "SRI01-API-Skomorowski-s25884",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "get players",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-rapidapi-host",
+						"value": "free-nba.p.rapidapi.com",
+						"type": "text"
+					},
+					{
+						"key": "x-rapidapi-key",
+						"value": "***REMOVED***",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://free-nba.p.rapidapi.com/players",
+					"protocol": "https",
+					"host": [
+						"free-nba",
+						"p",
+						"rapidapi",
+						"com"
+					],
+					"path": [
+						"players"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get player by id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-rapidapi-host",
+						"value": "free-nba.p.rapidapi.com",
+						"type": "text"
+					},
+					{
+						"key": "x-rapidapi-key",
+						"value": "***REMOVED***",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://free-nba.p.rapidapi.com/players/14",
+					"protocol": "https",
+					"host": [
+						"free-nba",
+						"p",
+						"rapidapi",
+						"com"
+					],
+					"path": [
+						"players",
+						"14"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "init session",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-RapidAPI-Host",
+						"value": "endlessmedicalapi1.p.rapidapi.com",
+						"type": "text"
+					},
+					{
+						"key": "X-RapidAPI-Key",
+						"value": "***REMOVED***",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://endlessmedicalapi1.p.rapidapi.com/InitSession",
+					"protocol": "https",
+					"host": [
+						"endlessmedicalapi1",
+						"p",
+						"rapidapi",
+						"com"
+					],
+					"path": [
+						"InitSession"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AcceptTermsOfUse",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-RapidAPI-Host",
+						"value": "endlessmedicalapi1.p.rapidapi.com",
+						"type": "text"
+					},
+					{
+						"key": "X-RapidAPI-Key",
+						"value": "***REMOVED***",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://endlessmedicalapi1.p.rapidapi.com/AcceptTermsOfUse?SessionID=syw8AXHCTgskKnY8&passphrase=I have read, understood and I accept and agree to comply with the Terms of Use of EndlessMedicalAPI and Endless Medical services. The Terms of Use are available on endlessmedical.com",
+					"protocol": "https",
+					"host": [
+						"endlessmedicalapi1",
+						"p",
+						"rapidapi",
+						"com"
+					],
+					"path": [
+						"AcceptTermsOfUse"
+					],
+					"query": [
+						{
+							"key": "SessionID",
+							"value": "syw8AXHCTgskKnY8"
+						},
+						{
+							"key": "passphrase",
+							"value": "I have read, understood and I accept and agree to comply with the Terms of Use of EndlessMedicalAPI and Endless Medical services. The Terms of Use are available on endlessmedical.com"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update feature",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-RapidAPI-Host",
+						"value": "endlessmedicalapi1.p.rapidapi.com",
+						"type": "text"
+					},
+					{
+						"key": "X-RapidAPI-Key",
+						"value": "***REMOVED***",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://endlessmedicalapi1.p.rapidapi.com/UpdateFeature?name=Age&SessionID=syw8AXHCTgskKnY8&value=23",
+					"protocol": "https",
+					"host": [
+						"endlessmedicalapi1",
+						"p",
+						"rapidapi",
+						"com"
+					],
+					"path": [
+						"UpdateFeature"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Age"
+						},
+						{
+							"key": "SessionID",
+							"value": "syw8AXHCTgskKnY8"
+						},
+						{
+							"key": "value",
+							"value": "23"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,238 @@
+{
+	"info": {
+		"_postman_id": "f54c189e-5f62-41c5-8ba9-ae0632c451dd",
+		"name": "SRI01-CRUD-Skomorowski-s25884",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "get all",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "***REMOVED***",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://s25884-b4e9.restdb.io/rest/People",
+					"protocol": "https",
+					"host": [
+						"s25884-b4e9",
+						"restdb",
+						"io"
+					],
+					"path": [
+						"rest",
+						"People"
+					],
+					"query": [
+						{
+							"key": "x-api-key",
+							"value": "***REMOVED***",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get by id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "***REMOVED***",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://s25884-b4e9.restdb.io/rest/People/622c9ad2b55385400002a703",
+					"protocol": "https",
+					"host": [
+						"s25884-b4e9",
+						"restdb",
+						"io"
+					],
+					"path": [
+						"rest",
+						"People",
+						"622c9ad2b55385400002a703"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "***REMOVED***",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"sex\": \"Male\",\r\n    \"first_name\": \"Jonathan2\",\r\n    \"last_name\": \"Payne\",\r\n    \"job\": \"Safety Technician IV\",\r\n    \"email\": \"jpayne75r@squidoo.com\",\r\n    \"location\": {\r\n        \"city\": \"Banjar Kajanan\",\r\n        \"address\": {\r\n            \"streetname\": \"Toban\",\r\n            \"streetnumber\": \"0\"\r\n        }\r\n    },\r\n    \"description\": \"donec posuere metus vitae ipsum aliquam non mauris morbi non\",\r\n    \"height\": 161.17,\r\n    \"weight\": 55.54,\r\n    \"birth_date\": \"2004-02-15T08:23:22.000Z\",\r\n    \"nationality\": \"Indonesia\",\r\n    \"credit\": [\r\n        {\r\n            \"type\": \"switch\",\r\n            \"number\": \"3533690078507355\",\r\n            \"currency\": \"SYP\",\r\n            \"balance\": 4701.56\r\n        },\r\n        {\r\n            \"type\": \"visa-electron\",\r\n            \"number\": \"5100139101545121\",\r\n            \"currency\": \"CNY\",\r\n            \"balance\": 5625.61\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://s25884-b4e9.restdb.io/rest/people",
+					"protocol": "https",
+					"host": [
+						"s25884-b4e9",
+						"restdb",
+						"io"
+					],
+					"path": [
+						"rest",
+						"people"
+					],
+					"query": [
+						{
+							"key": "sex",
+							"value": "Male",
+							"disabled": true
+						},
+						{
+							"key": "first_name",
+							"value": "Jan",
+							"disabled": true
+						},
+						{
+							"key": "last_name",
+							"value": "Pau",
+							"disabled": true
+						},
+						{
+							"key": "job",
+							"value": "technican",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "***REMOVED***",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://s25884-b4e9.restdb.io/rest/people/623e430ea8cb377c00018741",
+					"protocol": "https",
+					"host": [
+						"s25884-b4e9",
+						"restdb",
+						"io"
+					],
+					"path": [
+						"rest",
+						"people",
+						"623e430ea8cb377c00018741"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PATCH",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "***REMOVED***",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"first_name\": \"Carlos\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://s25884-b4e9.restdb.io/rest/people/***REMOVED***",
+					"protocol": "https",
+					"host": [
+						"s25884-b4e9",
+						"restdb",
+						"io"
+					],
+					"path": [
+						"rest",
+						"people",
+						"***REMOVED***"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "***REMOVED***",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"_id\": \"***REMOVED***\",\r\n    \"sex\": \"Male\",\r\n    \"first_name\": \"Carlos\",\r\n    \"last_name\": \"Turner\",\r\n    \"job\": \"Clinical Specialist\",\r\n    \"email\": \"gturner75t@webnode.com\",\r\n    \"location\": {\r\n        \"city\": \"Ismailia\",\r\n        \"address\": {\r\n            \"streetname\": \"Cody\",\r\n            \"streetnumber\": \"7177\"\r\n        }\r\n    },\r\n    \"description\": \"penatibus et magnis dis parturient montes nascetur ridiculus mus etiam vel augue vestibulum rutrum rutrum neque aenean\",\r\n    \"height\": 186.49,\r\n    \"weight\": 67.33,\r\n    \"birth_date\": \"1954-02-22T12:59:08.000Z\",\r\n    \"nationality\": \"Egypt\",\r\n    \"credit\": [\r\n        {\r\n            \"type\": \"switch\",\r\n            \"number\": \"6304160029746791\",\r\n            \"currency\": \"IDR\",\r\n            \"balance\": 5996.85\r\n        },\r\n        {\r\n            \"type\": \"jcb\",\r\n            \"number\": \"3532008349678916\",\r\n            \"currency\": \"CNY\",\r\n            \"balance\": 4759.8\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://s25884-b4e9.restdb.io/rest/people/***REMOVED***",
+					"protocol": "https",
+					"host": [
+						"s25884-b4e9",
+						"restdb",
+						"io"
+					],
+					"path": [
+						"rest",
+						"people",
+						"***REMOVED***"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
